@@ -680,23 +680,26 @@ a {
 .product-img__item {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center horizontally */
   position: absolute;
   pointer-events: none;
   user-select: none;
   top: 50%;
-  right: 0;
-  transform: translateY(-50%) translateX(-130px);
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
   opacity: 0;
   transition: all 0.3s;
 }
 .product-img__item.active {
   opacity: 1;
-  transform: translateY(-50%) translateX(0);
+  transform: translate(-50%, -50%);
   transition-delay: 0.3s;
 }
 .product-img__item img {
   object-fit: contain;
-  object-position: center right;
+  object-position: center;
+  width: 110%; /* Reduce size by 20% */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .social {
